@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  cursor: default;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+body {
+  background-color: #69a687;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:link {
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.CV-wrapper {
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 50px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.top>div {
+  width: 30%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top .title {
+  align-items: flex-end;
+}
+
+.top h1 {
+  font-size: 41px;
+  margin-bottom: 5px;
+}
+
+.top .title p {
+  font-size: 15px;
+  align-items: center;
+}
+
+.top .contact {
+  align-items: flex-start;
+}
+
+.top .contact .text {
+  margin-left: 15px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 16px;
+  width: 16px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  background: #69a687;
+  color: white;
+}
+
+.photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.photo .rm {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.photo .rm .circle {
+  width: 30px;
+  height: 30px;
+  background: #69a687;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+  animation: circle 6s linear infinite;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(-120px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-120px) rotate(-360deg);
+  }
+}
+
+.photo img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0px 20px rgb(105 166 135);
+}
+
+.photo img:hover+.circle {
+  animation-play-state: paused;
+}
+
+.contact a {
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact a:hover {
+  transform: translateX(10px);
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-wrapper>div {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.left-column>div,
+.right-column>div {
+  padding: 0px 50px;
+  margin-bottom: 50px;
+}
+
+.right-column {
+  border-left: 2px solid #69a687;
+}
+
+.main-wrapper h3 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.left-column span.year {
+  float: left;
+}
+
+.left-column .job {
+  margin-left: 80px;
+}
+
+.experience li, .education li {
+  margin-bottom: 25px;
+}
+
+.left-column .job p:last-child {
+  margin-top: 15px;
+}
+
+.right-column .skills li {
+  position: relative;
+}
+
+.right-column .skills li>span {
+  display: inline-block;
+  margin-right: 20px;
+  width: 60px;
+  font-weight: 600;
+}
+
+.right-column .skills li .skills-bar {
+  width: 60%;
+  height: 20px;
+  background: #d8d8d8;
+  border-radius: 15px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+
+.right-column .skills li .skills-bar .skills-progress {
+  height: inherit;
+  background: #69a687;
+  border-radius: inherit;
+}
+
+.right-column .skills li .html-progress div {
+  width: 0%;
+}
+
+.right-column .skills li .css-progress div {
+  width: 0%;
+}
+
+.right-column .skills li .js-progress div {
+  width: 0%;
+}
+
+.right-column .skills li .jquery-progress div {
+  width: 0%;
+}
+
+.right-column .skills li .git-progress div {
+  width: 0%;
+}
+
+.right-column .skills li .skills-bar span {
+  color: #000;
+  position: absolute;
+  width: 50px;
+  text-align: center;
+  left: calc(50% - 25px);
+  top: -5px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.right-column .another-skills .software-icon,
+.right-column .another-skills li {
+  display: inline-block;
+}
+
+.right-column .another-skills li {
+  margin-right: 20px;
+}
+
+.right-column .another-skills .software-icon {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.right-column .another-skills div.active {
+  border: 1px solid black;
+}
+
+.right-column .another-skills .software-icon img {
+  width: inherit;
+  cursor: pointer;
+}
+.right-column .another-skills .skills-description {
+  font-size: 12px;
+  line-height: 1em;
+  margin-top: 20px;
+}
+.right-column .another-skills .skills-description p {
+  display: none;
+}
+.right-column .another-skills .skills-description p.active {
+  display: block;
+}
+
+@media screen and (max-width: 840px) {
+  .CV-wrapper {
+    margin: 10px;
+    padding: 0px;
+  }
+
+  .top {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .top>div,
+  .top .title,
+  .top .contact {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .top .contact {
+    margin-bottom: 0px;
+  }
+
+  .top .contact>div {
+    width: 250px;
+  }
+
+  .main-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column>div, .right-column>div {
+    padding: 0px 20px;
+    margin-bottom: 20px;
+  }
+
+  .right-column {
+    border-left: none;
+  }
+
+  .main-wrapper>div {
+    width: 100%;
+  }
+}
